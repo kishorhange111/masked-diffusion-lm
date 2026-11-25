@@ -1,0 +1,77 @@
+{
+ "ar_train_minutes": 3.3143454988797507,
+ "diffusion_train_minutes": 3.618525807062785,
+ "meta": "Tesla T4; both models 4,929,792 params, 6000 steps \u00d7 32 \u00d7 256 bytes, identical optimiser and schedule.",
+ "likelihood": {
+  "ar_bpb": 1.2243310768455673,
+  "diffusion_nelbo_bpb": 2.7450929448175514,
+  "diffusion_nelbo_se": 0.01779886278168011
+ },
+ "generation": [
+  {
+   "sampler": "real val data",
+   "judge_bpb": 1.247854003917328,
+   "entropy": 4.501858711242676,
+   "seconds": 0.0
+  },
+  {
+   "sampler": "AR, T=1 (256 sequential steps)",
+   "judge_bpb": 1.1215050576518062,
+   "entropy": 4.557085990905762,
+   "seconds": 4.280155897140503
+  },
+  {
+   "sampler": "diffusion, 8 steps, random order",
+   "judge_bpb": 6.362893040835987,
+   "entropy": 4.8854475021362305,
+   "seconds": 0.30139589309692383
+  },
+  {
+   "sampler": "diffusion, 32 steps, random order",
+   "judge_bpb": 5.9774324530407945,
+   "entropy": 4.874991416931152,
+   "seconds": 1.1008508205413818
+  },
+  {
+   "sampler": "diffusion, 128 steps, random order",
+   "judge_bpb": 5.636019373853981,
+   "entropy": 4.690046787261963,
+   "seconds": 4.3147971630096436
+  },
+  {
+   "sampler": "diffusion, 256 steps, random order",
+   "judge_bpb": 5.6673150568314865,
+   "entropy": 4.815374374389648,
+   "seconds": 8.603587865829468
+  },
+  {
+   "sampler": "diffusion, 8 steps, confidence order",
+   "judge_bpb": 0.596513010406795,
+   "entropy": 0.26425307989120483,
+   "seconds": 0.32674574851989746
+  },
+  {
+   "sampler": "diffusion, 32 steps, confidence order",
+   "judge_bpb": 0.2884181086738024,
+   "entropy": 0.04369393363595009,
+   "seconds": 1.0920214653015137
+  },
+  {
+   "sampler": "diffusion, 128 steps, confidence order",
+   "judge_bpb": 0.22501255535177594,
+   "entropy": 0.007051925174891949,
+   "seconds": 4.26459264755249
+  },
+  {
+   "sampler": "diffusion, 256 steps, confidence order",
+   "judge_bpb": 0.2229198059625832,
+   "entropy": 0.007051925174891949,
+   "seconds": 8.487176179885864
+  }
+ ],
+ "infill": {
+  "hole": 64,
+  "diffusion_acc": 0.296630859375,
+  "ar_prefix_only_acc": 0.20654296875
+ }
+}
